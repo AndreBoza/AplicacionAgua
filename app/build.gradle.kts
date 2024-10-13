@@ -1,6 +1,8 @@
 plugins {
-    alias(libs.plugins.android.application) version "8.6.0" // Asegúrate de que esta versión sea compatible y actualizada
-    alias(libs.plugins.kotlin.android) version "1.9.0" // Actualizado a la última versión de Kotlin
+    alias(libs.plugins.android.application) version "8.6.0" // Verifica compatibilidad con tu configuración
+    alias(libs.plugins.kotlin.android) version "1.9.0" // Kotlin actualizado
+    id("com.google.gms.google-services") version "4.4.2" apply false // Firebase Google Services actualizado
+    // Elimina esta línea duplicada: id("com.android.application")
 }
 
 android {
@@ -31,20 +33,20 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11 // Actualizado a Java 11
-        targetCompatibility = JavaVersion.VERSION_11 // Actualizado a Java 11
+        sourceCompatibility = JavaVersion.VERSION_11 // Uso de Java 11 para mejor compatibilidad
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "11" // Actualizado a JVM 11 para Kotlin
+        jvmTarget = "11" // Configuración para Kotlin con JVM 11
     }
 
     buildFeatures {
-        compose = true
+        compose = true // Habilita Jetpack Compose
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.1" // Versión recomendada del compilador de Kotlin para Compose
     }
 
     packaging {
@@ -66,7 +68,11 @@ dependencies {
 
     // Dependencia para Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.7.2")
-    implementation("androidx.compose.material3:material3:1.2.0") // Versión estable más reciente
+    implementation("androidx.compose.material3:material3:1.2.0")
+
+    // Firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

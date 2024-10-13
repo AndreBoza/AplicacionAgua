@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "728271417464",
+    "project_id": "hydroregis",
+    "storage_bucket": "hydroregis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728271417464:android:95a56057e869af7953fd8d",
+        "android_client_info": {
+          "package_name": "com.example.myaplicacion01"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyjvZRQrscPzjxazPAdqGWUSSmytw28y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
