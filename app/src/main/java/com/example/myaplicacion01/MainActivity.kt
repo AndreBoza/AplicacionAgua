@@ -14,7 +14,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyAplicacion01Theme {
                 val navController = rememberNavController()
+
                 NavHost(navController = navController, startDestination = "login") {
+                    // Pantallas existentes
                     composable("login") {
                         HydroregisScreen(navController = navController)
                     }
@@ -35,6 +37,11 @@ class MainActivity : ComponentActivity() {
                     }
                     composable("actividades_generales") {
                         ActividadesGeneralesScreen(navController = navController)
+                    }
+
+                    // Nuevo destino: TanqueScreen
+                    composable("tanque_screen") {
+                        TanqueScreen(navController = navController)
                     }
                 }
             }

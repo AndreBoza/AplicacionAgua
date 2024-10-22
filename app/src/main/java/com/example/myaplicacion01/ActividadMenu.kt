@@ -12,7 +12,7 @@ import androidx.navigation.NavHostController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ActividadesGeneralesScreen(
+fun ActicidadMenu(
     navController: NavHostController,
     actividades: MutableList<String> // Recibe la lista de actividades como parámetro
 ) {
@@ -33,7 +33,10 @@ fun ActividadesGeneralesScreen(
             // Botones dinámicos basados en la lista de actividades
             actividades.forEach { actividad ->
                 Button(
-                    onClick = { /* Acción para cada actividad */ },
+                    onClick = {
+                        // Navegar a TanqueScreen al hacer clic en la actividad
+                        navController.navigate("tanque_Screen/$actividad")
+                    },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = 8.dp),

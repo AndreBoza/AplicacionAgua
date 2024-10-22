@@ -137,7 +137,7 @@ fun FourthScreen(navController: NavHostController) {
 
             // Botón de Tanque
             Button(
-                onClick = { navController.navigate("") },
+                onClick = { navController.navigate("tanque_Screen") },
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Blue),
                 shape = RoundedCornerShape(12.dp)
